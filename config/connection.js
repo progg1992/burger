@@ -3,7 +3,9 @@ const mysql = require('mysql');
 //Create MySQL conection for deployment and local development
 let connection;
 
-connection = {
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
   //DB Connection for development
   connection = mysql.createConnection({
     port:3306,
