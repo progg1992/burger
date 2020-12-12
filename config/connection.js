@@ -11,10 +11,10 @@ if (process.env.JAWSDB_URL) {
     port:3306,
     host: '127.0.0.1',
     user: 'root',
-    password: process.env.PASSWORD,
+    password: 'MhAlL#15091321',
     database: 'burgers_db'
   })
-}
+};
 
 // Make the connection to MySQL
 connection.connect(function(err) {
